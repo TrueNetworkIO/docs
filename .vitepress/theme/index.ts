@@ -2,7 +2,10 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import Carousel from './components/Carousel.vue'
+import Projects from './components/Projects.vue'
 import './style.css'
+
 
 export default {
   extends: DefaultTheme,
@@ -12,6 +15,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.component('Carousel', Carousel)
+    app.component('Projects', Projects)
   }
 } satisfies Theme

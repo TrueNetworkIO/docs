@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
@@ -43,6 +45,14 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+ @font-face {
+  font-family: 'HeadlineFont';
+  src: url('./assets/fonts/nimbus/reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
@@ -51,7 +61,7 @@
 
   --vp-c-brand-1: #ff4000;
   --vp-c-brand-2: #d3d9fe;
-  --vp-c-brand-3: #c2ebc3;
+  --vp-c-brand-3: #c2ebc2;
   --vp-c-brand-soft: #ff9ecf;
 
   --vp-c-tip-1: var(--vp-c-brand-1);
@@ -135,4 +145,218 @@
 
 .name .clip {
   /* text-shadow: 0px 0px 0 #F3BD1C, 1px  1px 0 #b88a00,  1px 1px 0 #b88a00, 1px 0.25px 0 #b88a00; */
+}
+
+.VPHero .name,
+.VPHero .text {
+  font-family: 'HeadlineFont', sans-serif !important;
+}
+
+/* All h1 headings */
+h1, .ftfamily {
+  font-family: 'HeadlineFont', sans-serif;
+}
+
+.blog-container {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-item {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+  transition: all 0.2s ease;
+}
+
+.blog-item:hover {
+  background-color: var(--vp-c-bg);
+  transform: translateY(-2px);
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-date {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.blog-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--vp-c-brand-3);
+  color: #000;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.blog-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: var(--vp-c-text-1);
+}
+
+.blog-title a {
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-title a:hover {
+  color: #FF3502;
+}
+
+.blog-excerpt {
+  color: var(--vp-c-text-2);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.blog-footer {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.view-all-link {
+  font-size: 0.9375rem;
+  color: #0C85FE;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.view-all-link:hover {
+  text-decoration: underline !important;
+}
+
+@media (min-width: 768px) {
+  .blog-item {
+    padding: 1.75rem;
+  }
+}
+
+.app-card {
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+}
+
+.app-card h3 {
+  color: var(--vp-c-text-1);
+}
+
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.carousel-slide.prev {
+  transform: translateX(-100%);
+}
+.image-hover:hover {
+  transform: scale(1.05);
+  transition-duration: 700ms;
+}
+.link-arrow {
+  transition: transform 0.3s ease;
+}
+.link-text:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+.highlight-text {
+  display: inline;
+  background: linear-gradient(180deg, transparent 40%, rgba(255, 220, 0, 0.5) 40%);
+  padding: 0.2em 0;
+  font-weight: 500;
+  line-height: 1.6;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.blur-gradient {
+  background-color: #fff;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 66.67%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.8) 85%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 66.67%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.8) 85%,
+    rgba(0, 0, 0, 1) 90%
+  );
+}
+
+.slide-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.slide-description {
+  line-height: 1.7;
+  display: inline-block;
+}
+
+.highlight {
+  background-color: rgba(194, 235, 195, 0.6);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.view-project {
+  color: #ff3a3a;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.view-project:hover {
+  color: #ff5555;
+  transform: translateX(5px);
+}
+
+.view-project svg {
+  margin-left: 8px;
 }

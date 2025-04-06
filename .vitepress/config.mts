@@ -1,7 +1,13 @@
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
+  },
   sitemap: {
     hostname: 'https://docs.truenetwork.io'
   },
@@ -13,9 +19,13 @@ export default defineConfig({
   description: "True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.",
   themeConfig: {
     logo: 'symbol.png',
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Quickstart', link: '/quickstart' },
+      { text: 'Playground', link: 'https://playground.truenetwork.io' },
       { text: 'Join Community 💬', link: 'https://at.truenetwork.io/community' }
     ],
 
@@ -67,6 +77,6 @@ export default defineConfig({
     footer: {
       message: 'The Reputation Layer of the Internet',
       copyright: 'Copyright © 2024 Jupiter Innovations Lab Inc'
-    }
+    },
   }
 })
