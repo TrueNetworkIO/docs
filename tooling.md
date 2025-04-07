@@ -14,6 +14,9 @@ Raman Network includes early versions of three core pallets: Issuer, Credential,
 
 Let's first take a look at the tools we've built to help you get started quickly.
 
+- **Playground** ([link](https://www.playground.truenetwork.io))<br/>
+True Network's Playground is your central hub for quick SDK testing and experimentation. Its web code editor lets you run SDK programs on your device instantly, without any installation needed.
+
 - **Reputation CLI** ([link](https://www.npmjs.com/package/reputation-cli))<br/>
 It offers a set of core features necessary for starting a new project, registering as an issuer, and deploying algorithms. While it's still a work in progress, it's live and ready for you to start using. If you encounter any issues, please report them to the community.
 
@@ -23,8 +26,13 @@ The SDK provides a simple interface for building server-side and client-side app
   > Note: We recommend setting up the SDK environment in your project using our CLI, which handles all the necessary initial setup.
 
 
+- **Prism Explorer** ([link](https://prism.truenetwork.io))<br/>
+Prism provides a user-friendly explorer for your dApp, empowering consumers to easily verify on-chain attestations. Its dynamic customization ensures a seamless and consistent user experience, reinforcing your dApp's brand and reliability.
+
+
 - **Blockchain Explorer** ([link](https://truenetwork.io/explorer/raman))<br/>
 Explore the chain state, view transactions sent on-chain, and observe the extrinsics being called. While the explorer provides insights, it's not the best platform for creating and calling extrinsics directly, as byte conversion issues might occur. These are better handled within the SDK.
+
 
 - **Example Repository** ([link](https://github.com/TrueNetworkIO/true-example))<br/>
 This repository serves as a basic demo of the True Network’s features and SDK tools. It's a great starting point to get an early understanding, and you can refer to it when you have questions or need guidance

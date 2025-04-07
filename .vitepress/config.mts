@@ -55,6 +55,27 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Zero To Hero Guide',
+        items: [
+          { text: 'Starting a new project ✨', link: '/guide/start-new-project' },
+          { text: 'Making an attestation', link: '/guide/make-an-attestation' },
+          { text: 'Verifying user attesations', link: '/guide/verify-attestation' },
+          {
+            text: 'Reputation Algorithms', collapsed: false, link: '/guide/write-reputation-algo', items: [
+              {
+                text: 'Writing a reputation algo',
+                link: '/guide/write-reputation-algo'
+              },
+              {
+                text: 'Fetching reputation score',
+                link: '/guide/fetch-reputation-score'
+              }
+            ]
+          },
+          { text: 'Essential utilities functions', link: '/guide/utilities' }
+        ]
+      },
+      {
         text: 'Protocol Lightpaper',
         items: [
           { text: 'Overview 📃', link: '/lightpaper/overview' },

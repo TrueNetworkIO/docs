@@ -51,7 +51,7 @@ const cI = [
     id: 3,
     title: "Join Developer Community",
     image: "https://pbs.twimg.com/media/Gdk4iK1boAAqicL?format=jpg&name=large",
-    about: "Top two projects at what the hack <wth/> hackathon, hosted in Bangalore was secured by projects built on True Network.",
+    about: "Have an idea that you want to build? Join our developer community to get support and resources.",
     action: {
       text: "Join Now",
       link: "https://at.truenetwork.io/community"
