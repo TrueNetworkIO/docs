@@ -257,6 +257,8 @@ h1, .ftfamily {
 .app-card {
   background-color: var(--vp-c-bg-soft);
   color: var(--vp-c-text-2);
+
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .app-card h3 {

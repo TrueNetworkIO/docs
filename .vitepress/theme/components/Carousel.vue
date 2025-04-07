@@ -1,6 +1,6 @@
 <template>
   <div class="w-full mx-auto bg-gray-50 dark:bg-[#202126] rounded-xl mt-[2rem]">
-    <div class="relative h-108 md:h-96 rounded-xl overflow-hidden shadow-md" id="carousel-container"></div>
+    <div class="relative h-108 md:h-108 rounded-xl overflow-hidden shadow-md" id="carousel-container"></div>
   </div>
 </template>
 
@@ -139,7 +139,7 @@ onMounted(() => {
         </div>
         
         <!-- Right side - Content -->
-        <div class="w-full h-full md:w-1/3 p-8 absolute bottom-0 right-0 flex-col justify-center bg-gradient-to-r from-transparent to-white/30 backdrop-blur-xs">
+        <div class="w-full h-full lg:w-1/3 p-8 absolute bottom-0 right-0 flex-col justify-center bg-gradient-to-r from-transparent to-white/30 backdrop-blur-xs">
           <div class="mb-3 text-gray-200 text-sm tracking-wider text-shadow-md">
             ${item.date}
           </div>

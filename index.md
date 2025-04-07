@@ -31,8 +31,6 @@ features:
 ---
 
 <div class="mt-12">
-  <h1>Truly Awesome Apps</h1>
-
   <Projects />
 </div>
 

@@ -1,4 +1,8 @@
 <template>
+  <div class="flex flex-row justify-between items-center">
+    <h1>Truly Awesome Apps</h1>
+    <a target="_blank" href="https://wiki.truenetwork.io/apps" class="text-sm hover:underline cursor-pointer hidden md:block">See All</a>
+  </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
     <div 
       v-for="project in projects" 
@@ -23,7 +27,7 @@
       </div>
       <div class="p-5 flex-1 flex flex-col justify-between">
         <div class="flex-1">
-          <span class="text-lg font-semibold mb-2 mt-0">{{ project.title }}</span>
+          <span class="text-lg font-semibold mb-2 mt-0 text-[var(--vp-c-text-1)]">{{ project.title }}</span>
           <p class="text-sm mb-4">{{ project.description }}</p>
         </div>
         <div class="flex justify-between items-center">
