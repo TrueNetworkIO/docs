@@ -48,28 +48,15 @@
 </template>
 
 <script setup>
-function shuffleArray(array) {
-  // Create a copy to avoid modifying the original array
-  const shuffled = [...array];
-  
-  // Start from the last element and swap with a random element
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    // Generate random index from 0 to i
-    const j = Math.floor(Math.random() * (i + 1));
-    
-    // Swap elements at i and j
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  
-  return shuffled;
-}
+import { ref, onMounted } from 'vue';
 
-const p = ([
+// Define the projects with their correct data
+const projectsData = [
   {
     title: "Placeholder",
     description: "IoT-based Device that UsesOn Chain Attestation Reputation system for Advertisements.",
-    screenshot: "./projects/placeholder-ss.png",
-    logo: "./projects/placeholder.webp",
+    screenshot: "/projects/placeholder-ss.png",
+    logo: "/projects/placeholder.webp",
     category: "IoT",
     link: "https://devfolio.co/projects/placeholder-6e86",
     linkText: "View on Devfolio"
@@ -77,8 +64,8 @@ const p = ([
   {
     title: "Insider Ink",
     description: "Platform for anonymous, verified employee feedback and transparent organizational reputation scoring.",
-    screenshot: "./projects/insider-ink.png",
-    logo: "./symbol.png",
+    screenshot: "/projects/insider-ink.png",
+    logo: "/symbol.png",
     category: "Social",
     link: "https://devfolio.co/projects/insiderink-4ff6",
     linkText: "View on Devfolio"
@@ -86,8 +73,8 @@ const p = ([
   {
     title: "Pixel Proof",
     description: "Pixel Proof enables individual journalism with cryptographic attestations on-chain for tackling deepfakes.",
-    screenshot: "./projects/pixelproof.png",
-    logo: "./symbol.png",
+    screenshot: "/projects/pixelproof.png",
+    logo: "/symbol.png",
     category: "Social",
     link: "https://pixelproof.net",
     linkText: "Try Now"
@@ -95,8 +82,8 @@ const p = ([
   {
     title: "Dot Cade",
     description: "An on-chain gaming platform with unified player identity on True Network.",
-    screenshot: "./projects/dotcade.png",
-    logo: "./symbol.png",
+    screenshot: "/projects/dotcade.png",
+    logo: "/symbol.png",
     category: "Gaming",
     link: "https://dotcade.fun",
     linkText: "Play Now"
@@ -104,16 +91,39 @@ const p = ([
   {
     title: "Meme True",
     description: "Meme betting platform that allows users to bet on the virality of meme templates.",
-    screenshot: "./projects/memetrue.png",
-    logo: "./symbol.png",
+    screenshot: "/projects/memetrue.png",
+    logo: "/symbol.png",
     category: "Social",
     link: "https://memetrue.com",
     linkText: "Try Now"
   }
-]);
+];
 
-const projects = shuffleArray(p).slice(0, 3);
+// Properly shuffling the array while ensuring image consistency
+function shuffleArray(array) {
+  const shuffled = [...array];
+  
+  // Standard Fisher-Yates shuffle algorithm
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  
+  return shuffled;
+}
 
+// Use ref for reactivity
+const projects = ref([]);
+
+onMounted(() => {
+  // Create a shuffled list of projects that will be properly randomized
+  // but maintain image consistency within a single viewing session
+  projects.value = shuffleArray(projectsData).slice(0, 3);
+  
+  // Store the selection in localStorage to persist the same projects 
+  // across component re-renders within the same session
+  localStorage.setItem('selectedProjects', JSON.stringify(projects.value));
+});
 </script>
 
 <style scoped>
@@ -124,9 +134,5 @@ const projects = shuffleArray(p).slice(0, 3);
 .app-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.h-50 {
-  height: 200px;
 }
 </style>

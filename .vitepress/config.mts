@@ -12,9 +12,25 @@ export default defineConfig({
     hostname: 'https://docs.truenetwork.io'
   },
 
-  head: [['link', { rel: 'icon', href: '/assets/symbol.png' }], ['title', {}, 'True Network Docs']],
+  head: [
+    ['link', { rel: 'icon', href: '/assets/symbol.png' }], 
+    ['title', {}, 'True Network Docs: Attest & Score On-Chain Easily.'],
+    
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://docs.truenetwork.io/' }],
+    ['meta', { property: 'og:title', content: 'True Network Docs: Attest & Score On-Chain Easily.' }],
+    ['meta', { property: 'og:description', content: 'True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.' }],
+    ['meta', { property: 'og:image', content: 'https://docs.truenetwork.io/og-image.png' }],
+    
+    // Twitter
+    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { property: 'twitter:url', content: 'https://docs.truenetwork.io/' }],
+    ['meta', { property: 'twitter:title', content: 'True Network Docs: Attest & Score On-Chain Easily.' }],
+    ['meta', { property: 'twitter:description', content: 'True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.' }],
+    ['meta', { property: 'twitter:image', content: 'https://docs.truenetwork.io/og-image.png' }],
+  ],
   title: "Docs",
-
+  
   titleTemplate: "True Network",
   description: "True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.",
   themeConfig: {
