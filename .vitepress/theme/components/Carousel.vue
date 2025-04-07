@@ -124,8 +124,6 @@ onMounted(() => {
     const slide = document.createElement('div');
     slide.id = `slide-${index}`;
     slide.className = `carousel-slide transition-all duration-700 ease-in-out ${index === 0 ? 'active' : ''}`;
-    const bgColor = item.bgColor;
-    console.log(bgColor);
     slide.innerHTML = `
       <div class="flex h-full flex-col md:flex-row">
         <!-- Left side - Photo -->

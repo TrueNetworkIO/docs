@@ -47,7 +47,7 @@
 
  @font-face {
   font-family: 'HeadlineFont';
-  src: url('./assets/fonts/nimbus/reg.otf') format('opentype');
+  src: url('./fonts/nimbus/reg.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
