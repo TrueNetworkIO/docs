@@ -26,7 +26,18 @@ function shuffleArray(array) {
 // Define your carousel items
 const cI = [
   {
-    id: 1,
+    id: 2,
+    title: "Social Contracts at Pragma New Delhi",
+    image: "./pragma2025.png",
+    about: "Tushar presented how True Network is enabling Social Contracts — commitment, evidence, and consequence — to unlock trustless coordination at global scale.",
+    action: {
+      text: "Watch Video",
+      link: "https://youtu.be/fMJm_E96ZWE?si=nDEHFqyttIL40wnK"
+    },
+    date: "Sep 2025"
+  },
+  {
+    id: 2,
     title: "True Network at ETHIndia 2024",
     image: "https://pbs.twimg.com/media/GeHmI3xakAIzG0B?format=jpg&name=4096x4096",
     about: "20+ projects built on True Network at ETHIndia 2024, showcasing the developer enthusiasm over on-chain repuation.",
@@ -37,7 +48,7 @@ const cI = [
     date: "Dec 2024"
   },
   {
-    id: 2,
+    id: 3,
     title: "True Network's Winning Duo",
     image: "./image.png",
     about: "True hackers dominates WTH Hackathon with Dotcade (on-chain gaming) and MemeTrUE (meme-betting) winning top positions.",
@@ -48,7 +59,7 @@ const cI = [
     date: "Nov 2024, Bangalore"
   },
   {
-    id: 3,
+    id: 4,
     title: "Join Developer Community",
     image: "https://pbs.twimg.com/media/Gdk4iK1boAAqicL?format=jpg&name=large",
     about: "Have an idea that you want to build? Join our developer community to get support and resources.",
@@ -59,7 +70,7 @@ const cI = [
     date: "Jan 2024"
   },
   {
-    id: 4,
+    id: 5,
     title: "Presented at UN University Japan",
     image: "https://pbs.twimg.com/media/GUc9ZqaWsAAkJ3A?format=jpg&name=large",
     about: "During EDCON 2024, True Network was among 10 selected projects to present at the United Nations University.",
@@ -69,7 +80,7 @@ const cI = [
     },
     date: "Aug 2024, Tokyo"
   },{
-    id: 5,
+    id: 6,
     title: "Khoj: Finalist, ETHIndia 2024",
     image: "https://pbs.twimg.com/media/GeW3CO2aYAADXOl?format=jpg&name=small",
     about: "Bridging digital and physical worlds through AI-powered treasure hunts with True Network reputation tracking.",
@@ -80,7 +91,7 @@ const cI = [
     date: "Dec 2024, Bangalore"
   },
   {
-    id: 6,
+    id: 7,
     title: "Insider Ink: Finalist, ETHIndia 2024",
     image: "https://pbs.twimg.com/media/GeW3HBUaQAAMIr5?format=jpg&name=medium",
     about: "Platform for anonymous, verified employee feedback and transparent organizational reputation scoring transparently.",

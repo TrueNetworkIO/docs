@@ -43,7 +43,19 @@ features:
   <h1>Recent Blogs</h1>
   <div class="blog-container">
     <div class="blog-list">
-      <!-- Blog Item 1 -->
+      <!-- Blog Item 1 -->   
+      <div class="blog-item">
+        <div class="blog-meta">
+          <span class="blog-date">Nov 13, 2025</span>
+          <span class="blog-tag">Protocol</span>
+        </div>
+        <h3 class="blog-title">
+          <a href="https://wiki.truenetwork.io/social-contracts">Social Contracts — A Reputation-First Coordination Primitive</a>
+        </h3>
+        <p class="blog-excerpt">
+          Social Contracts introduce a reputation-first way for people and applications to coordinate without relying on capital as the primary trust mechanism...
+        </p>
+      </div>
       <div class="blog-item">
         <div class="blog-meta">
           <span class="blog-date">May 19, 2024</span>
