@@ -28,8 +28,8 @@ const cI = [
   {
     id: 2,
     title: "Social Contracts at Pragma New Delhi",
-    image: "./pragma2025.png",
-    about: "Tushar presented how True Network is enabling Social Contracts — commitment, evidence, and consequence — to unlock trustless coordination at global scale.",
+    image: "./pragma2025.jpg",
+    about: "Tushar presented how True Network is enabling Social Contracts — commitment, evidence, and consequence — to unlock trustless coordination.",
     action: {
       text: "Watch Video",
       link: "https://youtu.be/fMJm_E96ZWE?si=nDEHFqyttIL40wnK"

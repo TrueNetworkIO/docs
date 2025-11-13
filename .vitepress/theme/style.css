@@ -339,7 +339,7 @@ h1, .ftfamily {
 }
 
 .highlight {
-  background-color: rgba(194, 235, 195, 0.6);
+  background-color: #c2ebc399;
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
   font-weight: 500;
