@@ -149,11 +149,11 @@ const toggleProjects = () => {
 .see-all {
   font-size: 0.9rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
   color: var(--vp-c-text-1);
-  background: #fff;
+  background: var(--vp-c-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   cursor: pointer;
   transition: all 0.18s ease;
@@ -163,5 +163,16 @@ const toggleProjects = () => {
   border-color: rgba(255, 64, 0, 0.4);
   color: var(--vp-c-brand-1);
   box-shadow: 0 8px 18px rgba(255, 64, 0, 0.12);
+}
+
+:global(.dark) .see-all {
+  background: var(--vp-c-bg-alt);
+  border-color: var(--vp-c-divider);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+:global(.dark) .see-all:hover {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 65%, transparent);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
 }
 </style>
