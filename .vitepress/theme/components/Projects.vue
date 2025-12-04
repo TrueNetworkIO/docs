@@ -1,12 +1,17 @@
 <template>
   <div class="flex flex-row justify-between items-center">
     <h1>Truly Awesome Apps</h1>
-    <a target="_blank" href="https://wiki.truenetwork.io/apps" class="text-sm hover:underline cursor-pointer hidden md:block">See All</a>
+    <button class="see-all" type="button" @click="toggleProjects">
+      {{ showAll ? 'Show Featured' : 'See All Projects' }}
+    </button>
   </div>
+  <p class="text-sm text-[var(--vp-c-text-2)] mt-1">
+    Built on True Network — explore the community highlights or open the full list without leaving docs.
+  </p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-    <div 
-      v-for="project in projects" 
-      :key="project.title" 
+    <div
+      v-for="project in visibleProjects"
+      :key="project.title"
       class="app-card rounded-lg overflow-hidden shadow-sm h-full flex flex-col"
     >
       <!-- Image container with fixed height -->
@@ -48,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 // Define the projects with their correct data
 const projectsData = [
@@ -114,16 +119,24 @@ function shuffleArray(array) {
 
 // Use ref for reactivity
 const projects = ref([]);
+const showAll = ref(false);
+
+const visibleProjects = computed(() => (showAll.value ? projectsData : projects.value));
 
 onMounted(() => {
   // Create a shuffled list of projects that will be properly randomized
   // but maintain image consistency within a single viewing session
-  projects.value = shuffleArray(projectsData).slice(0, 3);
-  
-  // Store the selection in localStorage to persist the same projects 
+  const storedProjects = localStorage.getItem('selectedProjects');
+  projects.value = storedProjects ? JSON.parse(storedProjects) : shuffleArray(projectsData).slice(0, 3);
+
+  // Store the selection in localStorage to persist the same projects
   // across component re-renders within the same session
   localStorage.setItem('selectedProjects', JSON.stringify(projects.value));
 });
+
+const toggleProjects = () => {
+  showAll.value = !showAll.value;
+};
 </script>
 
 <style scoped>
@@ -134,5 +147,24 @@ onMounted(() => {
 .app-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.see-all {
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  color: var(--vp-c-text-1);
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.see-all:hover {
+  border-color: rgba(255, 64, 0, 0.4);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 8px 18px rgba(255, 64, 0, 0.12);
 }
 </style>
