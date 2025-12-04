@@ -5,9 +5,6 @@
       {{ showAll ? 'Show Featured' : 'See All Projects' }}
     </button>
   </div>
-  <p class="text-sm text-[var(--vp-c-text-2)] mt-1">
-    Built on True Network — explore the community highlights or open the full list without leaving docs.
-  </p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
     <div
       v-for="project in visibleProjects"

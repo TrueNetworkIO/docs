@@ -66,9 +66,8 @@ const dismiss = () => {
 
 <style scoped>
 .announcement-bar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: relative;
+  z-index: 1;
   background: linear-gradient(90deg, rgba(255, 64, 0, 0.12), rgba(255, 64, 0, 0.06));
   border-bottom: 1px solid rgba(255, 64, 0, 0.2);
   color: var(--vp-c-text-1);
