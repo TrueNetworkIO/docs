@@ -1,0 +1,19 @@
+[[redirects]]
+from = "/explorer/raman"
+to = "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Framan.truenetwork.io%2Fws#/explorer"
+status = 301
+
+[[redirects]]
+from = "/explorer/raman/*"
+to = "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Framan.truenetwork.io%2Fws#/explorer/:splat"
+status = 301
+
+[[redirects]]
+from = "/explorer"
+to = "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Framan.truenetwork.io%2Fws#/explorer"
+status = 301
+
+[[redirects]]
+from = "/explorer/*"
+to = "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Framan.truenetwork.io%2Fws#/explorer/:splat"
+status = 301
