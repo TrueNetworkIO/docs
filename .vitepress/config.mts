@@ -198,10 +198,9 @@ export default defineConfig({
     },
     announcementBar: {
       id: 'docs-2024-11-updates',
-      text: 'True Network Playground just shipped reputation-ready attestations with better developer tooling.',
+      text: 'Introducing Social Contracts: Using Reputation as Asset.',
       links: [
-        { label: 'Try the Playground', href: 'https://playground.truenetwork.io' },
-        { label: 'View release notes', href: 'https://at.truenetwork.io/updates' }
+        { label: 'Pragma Talk', href: 'https://youtu.be/fMJm_E96ZWE?si=y5k6dLDM3eOz3eG-' }
       ],
       dismissible: true
     }

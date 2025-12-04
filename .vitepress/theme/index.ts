@@ -11,9 +11,12 @@ import './style.css'
 export default {
   extends: DefaultTheme,
   Layout: () => {
+    const announcement = () => h(AnnouncementBar)
+
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'layout-top': () => h(AnnouncementBar)
+      'doc-before': announcement,
+      'home-hero-before': announcement
     })
   },
   enhanceApp({ app, router, siteData }) {
