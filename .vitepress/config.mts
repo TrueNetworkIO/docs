@@ -9,32 +9,113 @@ export default defineConfig({
     ]
   },
   sitemap: {
-    hostname: 'https://docs.truenetwork.io'
+    hostname: 'https://truenetwork.io'
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/assets/symbol.png' }], 
-    ['title', {}, 'True Network Docs: Attest & Score On-Chain Easily.'],
-    
+    ['link', { rel: 'icon', type: 'image/png', href: '/symbol.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/symbol.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#ff4000' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#ff4000' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+    ['meta', { name: 'keywords', content: 'True Network, on-chain attestations, reputation scoring, web3 infrastructure, crypto attestations, decentralized reputation' }],
+    ['meta', { name: 'author', content: 'True Network' }],
+    ['meta', { property: 'og:site_name', content: 'True Network Docs' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:url', content: 'https://docs.truenetwork.io/' }],
+    ['meta', { property: 'og:url', content: 'https://truenetwork.io/' }],
     ['meta', { property: 'og:title', content: 'True Network Docs: Attest & Score On-Chain Easily.' }],
-    ['meta', { property: 'og:description', content: 'True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.' }],
-    ['meta', { property: 'og:image', content: 'https://docs.truenetwork.io/og-image.png' }],
-    
+    ['meta', { property: 'og:image', content: 'https://truenetwork.io/og-image.png' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+
     // Twitter
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:url', content: 'https://docs.truenetwork.io/' }],
+    ['meta', { property: 'twitter:url', content: 'https://truenetwork.io/' }],
     ['meta', { property: 'twitter:title', content: 'True Network Docs: Attest & Score On-Chain Easily.' }],
-    ['meta', { property: 'twitter:description', content: 'True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.' }],
-    ['meta', { property: 'twitter:image', content: 'https://docs.truenetwork.io/og-image.png' }],
+    ['meta', { property: 'twitter:image', content: 'https://truenetwork.io/og-image.png' }],
+    ['meta', { name: 'twitter:site', content: '@truenetworkio' }],
+    ['title', {}, 'True Network Docs: Attest & Score On-Chain Easily.'],
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'True Network',
+      url: 'https://truenetwork.io/',
+      logo: 'https://truenetwork.io/symbol.png',
+      sameAs: [
+        'https://x.com/truenetworkio',
+        'https://www.linkedin.com/company/truenetwork',
+        'https://github.com/truenetworkio'
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'community',
+        url: 'https://at.truenetwork.io/community'
+      }
+    })],
   ],
   title: "Docs",
   
   titleTemplate: "True Network",
   description: "True Network provides the infrastructure for dApps to give on-chain attestations & build reptuation systems easily in minutes.",
+  transformHead({ page, siteData, title, description }) {
+    const hostname = 'https://truenetwork.io'
+    const canonicalUrl = `${hostname}${page}`
+    const metaDescription = description || siteData.description
+
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is True Network?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'True Network provides infrastructure for dApps to publish verifiable on-chain attestations and build robust reputation systems quickly.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How can I start building with True Network?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Follow the quickstart guide to learn how to create attestations, verify proofs, and plug reputation scores into your application.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where can I test True Network features?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Use the True Network Playground to experiment with attestations, reputation algorithms, and API endpoints in a guided environment.'
+          }
+        }
+      ]
+    }
+
+    const websiteSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      url: hostname,
+      name: title || 'True Network Docs',
+      description: metaDescription,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${hostname}/search?q={query}`,
+        'query-input': 'required name=query'
+      }
+    }
+
+    return [
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { name: 'description', content: metaDescription }],
+      ['meta', { property: 'og:description', content: metaDescription }],
+      ['meta', { property: 'twitter:description', content: metaDescription }],
+      ['script', { type: 'application/ld+json' }, JSON.stringify([websiteSchema, faqSchema])]
+    ]
+  },
   themeConfig: {
-    logo: 'https://docs.truenetwork.io/symbol.png',
+    logo: '/symbol.png',
     search: {
       provider: 'local'
     },
@@ -115,5 +196,13 @@ export default defineConfig({
       message: 'The Reputation Layer of the Internet',
       copyright: 'Copyright © 2024 Jupiter Innovations Lab Inc'
     },
+    announcementBar: {
+      id: 'docs-2024-11-updates',
+      text: 'Introducing Social Contracts: Using Reputation as Asset.',
+      links: [
+        { label: 'Pragma Talk', href: 'https://youtu.be/fMJm_E96ZWE?si=y5k6dLDM3eOz3eG-' }
+      ],
+      dismissible: true
+    }
   }
 })

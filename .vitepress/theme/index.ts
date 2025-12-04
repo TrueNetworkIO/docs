@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Carousel from './components/Carousel.vue'
+import AnnouncementBar from './components/AnnouncementBar.vue'
 import Projects from './components/Projects.vue'
 import './style.css'
 
@@ -10,8 +11,12 @@ import './style.css'
 export default {
   extends: DefaultTheme,
   Layout: () => {
+    const announcement = () => h(AnnouncementBar)
+
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'doc-before': announcement,
+      'home-hero-before': announcement
     })
   },
   enhanceApp({ app, router, siteData }) {
