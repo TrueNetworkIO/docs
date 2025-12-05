@@ -4,14 +4,14 @@ layout: home
 
 hero:
   name: "True Network"
-  text: "Bringing Accountability to Anonymity in Web3"
-  tagline: "True Network is an on-chain reputation protocol that lets dApps issue verifiable attestations and compute programmable trust scores in minutes."
+  text: "Reputation Becomes an Asset."
+  tagline: "The programmable layer for on-chain identity and reputation—issue verifiable attestations, run custom trust algorithms, and move scores across chains."
   image:
     src: /assets/reputation-header.png
     alt: "True Network on-chain reputation graphic"
   actions:
     - theme: brand
-      text: Join the Testnet
+      text: Join the Raman Testnet
       link: https://at.truenetwork.io/community
     - theme: alt
       text: Start Building
@@ -36,136 +36,82 @@ features:
 
 <section class="section shell gap-10 md:gap-16">
   <div class="section-header">
-    <p class="eyebrow">Problem → Solution</p>
-    <h1>Reputation Becomes an Asset</h1>
-    <p class="lede">The internet is now a patchwork of isolated profiles. Hiring, lending and verification are manual, while trust is fragmented across silos. True Network fixes this with a substrate-based blockchain that makes it easy to become an issuer, attest to work done and compose algorithms for trust scores.</p>
+    <p class="eyebrow">Programmable identity & reputation</p>
+    <h1>Unifying work, proof, and trust</h1>
+    <p class="lede">True Network is a substrate chain purpose-built for attestations and trust. dApps become issuers, anchor proofs, and deploy algorithms so identity, credit and reputation can travel fluidly across chains.</p>
   </div>
-  <div class="grid md:grid-cols-2 gap-6">
+  <div class="grid md:grid-cols-[1.2fr,0.8fr] gap-6 items-start">
     <div class="card">
-      <h3 class="card-title">Why Web3 Needs a Reputation Layer</h3>
+      <h3 class="card-title">Problem → Solution</h3>
       <ul class="icon-list">
-        <li><span>🔒</span><div><strong>Isolated identity.</strong> Reputation is stuck inside apps and cannot move across chains or communities.</div></li>
-        <li><span>⌛</span><div><strong>Manual verification.</strong> Hiring, credit checks and contributor reviews rely on screenshots and spreadsheets.</div></li>
-        <li><span>🤝</span><div><strong>No standard of trust.</strong> Without verifiable attestations, dApps rely on capital-based signals instead of merit.</div></li>
+        <li><span>🔒</span><div><strong>Silos break trust.</strong> Identity and history stay locked in apps; coordination requires screenshots and spreadsheets.</div></li>
+        <li><span>⌛</span><div><strong>Manual verification.</strong> Hiring, credit, and bounty payouts rely on humans instead of verifiable proofs.</div></li>
+        <li><span>🌐</span><div><strong>Cross-chain gaps.</strong> Moving reputation between ecosystems is brittle and expensive.</div></li>
+        <li><span>🛠️</span><div><strong>True Network fixes it.</strong> Issue attestations, stake reputation, and run portable scoring algorithms that any dApp can consume.</div></li>
       </ul>
+      <div class="pill">Raman private testnet live for builders</div>
     </div>
-    <div class="card accent">
-      <h3 class="card-title">True Network’s Answer</h3>
-      <ul class="icon-list">
-        <li><span>🛠️</span><div><strong>Issuer-first protocol.</strong> Register schemas, attest to completed work and anchor proofs directly on-chain.</div></li>
-        <li><span>🧮</span><div><strong>Programmable scoring.</strong> Deploy and update algorithms that combine attestations, staking and decay for living trust scores.</div></li>
-        <li><span>🪙</span><div><strong>Reputation as collateral.</strong> Staking and aging mechanics reward active contributors while reducing the cost of trust.</div></li>
-      </ul>
-      <div class="pill">Private testnet live: Raman Network</div>
-    </div>
-  </div>
-</section>
-
-<section class="section shell grid lg:grid-cols-[1.2fr,1fr] gap-10 md:gap-16 align-start">
-  <div>
-    <p class="eyebrow">How it Works</p>
-    <h2>On-chain attestations, portable identity, flexible algorithms</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <div>
-          <h4>Issue attestations</h4>
-          <p>Create schemas for skills, contributions or milestones. Every attestation carries issuer data, proofs and integrity guarantees.</p>
-        </div>
+    <div class="card accent diagram">
+      <p class="eyebrow">Trust flow</p>
+      <h3 class="card-title">Proofs → Scores → Utility</h3>
+      <div class="diagram-grid">
+        <div class="diagram-node">Issuers<br/><span>Teams, DAOs, Protocols</span></div>
+        <div class="diagram-arrow">Attestations</div>
+        <div class="diagram-node">True Network<br/><span>Programmable reputation</span></div>
+        <div class="diagram-arrow">Scores & APIs</div>
+        <div class="diagram-node">dApps<br/><span>Credit, hiring, games</span></div>
       </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <div>
-          <h4>Stake & age reputation</h4>
-          <p>Stake reputation to back claims. Aging mechanics keep scores fresh, incentivizing ongoing participation and penalizing dormancy.</p>
-        </div>
+      <p class="small">Built on Substrate with cross-chain pathways so reputation moves wherever users build.</p>
+      <div class="cta-row">
+        <a class="button" href="/guide/write-reputation-algo">Design an algorithm</a>
+        <a class="link" href="https://wiki.truenetwork.io">Docs ↗</a>
       </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <div>
-          <h4>Compose trust algorithms</h4>
-          <p>Developers ship custom scoring logic—weighted endorsements, time decay, slashing or rewards—then expose them to dApps via APIs.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-number">4</div>
-        <div>
-          <h4>Carry scores across chains</h4>
-          <p>Cross-chain compatibility lets users bring verified reputation to any ecosystem, unlocking mobility for work, credit and governance.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="diagram card">
-    <p class="eyebrow">Trust Graph</p>
-    <h3 class="card-title">Reputation flow</h3>
-    <div class="diagram-grid">
-      <div class="diagram-node">Issuers<br/><span>Teams, DAOs, Protocols</span></div>
-      <div class="diagram-arrow">Attestations</div>
-      <div class="diagram-node">True Network<br/><span>Substrate chain</span></div>
-      <div class="diagram-arrow">Scores & APIs</div>
-      <div class="diagram-node">dApps<br/><span>Borrowing, hiring, games</span></div>
-    </div>
-    <p class="small">Algorithm flexibility: deploy multiple scoring models per use case and evolve them without migrations.</p>
-    <div class="cta-row">
-      <a class="button" href="/guide/write-reputation-algo">Build a reputation algorithm</a>
-      <a class="link" href="https://wiki.truenetwork.io">View docs ↗</a>
-    </div>
-  </div>
-</section>
-
-<section class="section shell">
-  <div class="section-header">
-    <p class="eyebrow">Use Cases</p>
-    <h2>What developers are building</h2>
-    <p class="lede">True Network unlocks capital-efficient, merit-based experiences that were impossible with siloed credentials.</p>
-  </div>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="card">
-      <h3 class="card-title">Under-collateralized lending</h3>
-      <p>Use on-chain work history and endorsements to underwrite credit without demanding oversized collateral.</p>
-    </div>
-    <div class="card">
-      <h3 class="card-title">On-chain P2P exchanges</h3>
-      <p>Filter counterparties by verifiable reputation to reduce fraud and improve marketplace liquidity.</p>
-    </div>
-    <div class="card">
-      <h3 class="card-title">Merit-based governance</h3>
-      <p>Align voting power with proven contributions rather than token balances to curb plutocracy.</p>
-    </div>
-    <div class="card">
-      <h3 class="card-title">Gaming & tournaments</h3>
-      <p>Authenticate player skill, achievements and fair play across titles with portable attestations.</p>
-    </div>
-    <div class="card">
-      <h3 class="card-title">Content reputation</h3>
-      <p>Rank creators and curators by credibility signals so quality rises above noise in social feeds.</p>
-    </div>
-    <div class="card">
-      <h3 class="card-title">Hiring & bounties</h3>
-      <p>Verify portfolio proof-of-work and match contributors to bounties automatically with programmatic trust scores.</p>
     </div>
   </div>
 </section>
 
 <section class="section shell grid lg:grid-cols-[1.1fr,0.9fr] gap-10 md:gap-16 align-start">
   <div>
-    <p class="eyebrow">Mission & Values</p>
-    <h2>Accountability for anonymous builders</h2>
-    <p class="lede">True Network’s mission is to bring accountability to anonymity and create a merit-based reputation economy. We focus on permissionless access, transparent computation and privacy-preserving attestations that respect users while elevating trustworthy actors.</p>
-    <ul class="icon-list compact">
-      <li><span>🚀</span><div><strong>Permissionless</strong> — anyone can issue schemas, stake reputation and compose algorithms.</div></li>
-      <li><span>📖</span><div><strong>Transparent</strong> — algorithms are auditable and scores are reproducible across clients.</div></li>
-      <li><span>🛡️</span><div><strong>Privacy-aware</strong> — proofs and selective disclosure keep sensitive data protected.</div></li>
-    </ul>
+    <p class="eyebrow">How we do it</p>
+    <h2>Fluid identity rails for every chain</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          <h4>Attest with structure</h4>
+          <p>Create schemas, attach issuer metadata, and sign proofs. Merkle-ready storage makes attestations queryable and compact.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          <h4>Programmable trust</h4>
+          <p>Deploy scoring algorithms with staking, aging, expiry and custom logic—no migrations required as they evolve.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          <h4>Portable reputation</h4>
+          <p>Light-client bridging, signature types, and selective disclosure let users carry trust across EVM chains and beyond.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div>
+          <h4>Build apps fast</h4>
+          <p>Use the upgraded JS SDK, CLI, and issuer explorer to issue, verify, and index attestations for consumer-ready UX.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card">
-    <p class="eyebrow">Product & Roadmap</p>
+    <p class="eyebrow">Roadmap snapshot</p>
     <ol class="roadmap">
-      <li><div class="dot live"></div><div><strong>Private testnet (Raman Network)</strong><p>Developers can issue attestations, test staking mechanics and expose early APIs.</p></div></li>
-      <li><div class="dot"></div><div><strong>Public testnet</strong><p>Open onboarding, explorer launch, early SDK integrations and governance bootstrapping.</p></div></li>
-      <li><div class="dot"></div><div><strong>Mainnet launch</strong><p>Production-grade reputation primitives with slashing, aging and bridge support.</p></div></li>
-      <li><div class="dot"></div><div><strong>SDK & tooling</strong><p>Expanded TypeScript SDK, reference apps like Dot Cade (gaming) and Skill Sync (developer hiring).</p></div></li>
+      <li><div class="dot live"></div><div><strong>Now: Raman private testnet</strong><p>Developers experiment with attestations, staking, and algorithm prototypes.</p></div></li>
+      <li><div class="dot"></div><div><strong>Next 3 months</strong><p>Merkle storage for attestations, light-client bridges to EVM/Solana, IPFS support, richer SDK/CLI, issuer explorer, and private attestations.</p></div></li>
+      <li><div class="dot"></div><div><strong>Next 6 months</strong><p>Public testnet → mainnet prep with token bridges, staking, devops hardening, multi-app launches, and BD partnerships.</p></div></li>
+      <li><div class="dot"></div><div><strong>Vision</strong><p>Social contracts and reputation-native apps built on a unified, programmable identity layer.</p></div></li>
     </ol>
     <div class="cta-row">
       <a class="button" href="/quickstart">Start with the SDK</a>
@@ -176,9 +122,90 @@ features:
 
 <section class="section shell">
   <div class="section-header">
+    <p class="eyebrow">What we do</p>
+    <h2>Programmable reputation for real apps</h2>
+    <p class="lede">True Network makes identity and credit usable: issuers attest on-chain, algorithms score contextually, and dApps consume trust programmatically.</p>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="card">
+      <h3 class="card-title">Under-collateralized lending</h3>
+      <p>Combine work history, skill proofs, and staking to underwrite fairer credit.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">On-chain P2P & commerce</h3>
+      <p>Filter counterparties by portable trust scores to cut fraud and boost liquidity.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Merit-based governance</h3>
+      <p>Align votes with proven contributions instead of token balances.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Gaming & tournaments</h3>
+      <p>Carry player skill and achievements across titles for fair matchmaking and rewards.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Content & social reputation</h3>
+      <p>Rank creators and curators by verifiable signals so quality wins over noise.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Hiring & bounties</h3>
+      <p>Verify proof-of-work automatically and route talent to roles or tasks.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Airdrops & rewards</h3>
+      <p>Distribute incentives based on reputation metrics, not only token holdings.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">Attestation-based bridges</h3>
+      <p>Move trustworthy state across chains with bridgeable attestation data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section shell">
+  <div class="section-header">
+    <p class="eyebrow">Highlights & Hackathons</p>
+    <h2>Where builders shipped with True Network</h2>
+    <p class="lede">ETHIndia finalists, Pragma demos, UN University showcase, and community projects across gaming, social, and identity.</p>
+  </div>
+  <Carousel />
+</section>
+
+<section class="section shell">
+  <div class="section-header">
+    <p class="eyebrow">Apps built on True</p>
+    <h2>Community projects</h2>
+    <p class="lede">Start from real examples: gaming, social reputation, IoT proofs and more.</p>
+  </div>
+  <Projects />
+</section>
+
+<section class="section shell grid lg:grid-cols-[1.1fr,0.9fr] gap-10 md:gap-16 align-start">
+  <div>
+    <p class="eyebrow">Mission & values</p>
+    <h2>Accountability with privacy by design</h2>
+    <p class="lede">True Network exists to make on-chain identity usable. We bring accountability to anonymity, enabling a merit-based reputation economy with permissionless access, transparent computation, and privacy-preserving proofs.</p>
+    <ul class="icon-list compact">
+      <li><span>🚀</span><div><strong>Permissionless</strong> — anyone can issue schemas, stake reputation, and deploy algorithms.</div></li>
+      <li><span>📖</span><div><strong>Transparent</strong> — algorithms are auditable; scores are reproducible across clients.</div></li>
+      <li><span>🛡️</span><div><strong>Privacy-aware</strong> — selective disclosure, private attestations, and TEE/zk-friendly design.</div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <p class="eyebrow">Product momentum</p>
+    <p class="small">Shipping towards a unified identity & reputation fabric with SDK upgrades, indexers, issuer explorer, Prism UI refresh, and devops for chain + tooling.</p>
+    <div class="cta-row">
+      <a class="button" href="/quickstart">Build on True</a>
+      <a class="link" href="https://github.com/truenetworkio">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section shell">
+  <div class="section-header">
     <p class="eyebrow">Team</p>
     <h2>Builders behind True Network</h2>
-    <p class="lede">We are a product-first Web3 startup with deep substrate and developer experience.</p>
+    <p class="lede">We are a digital-native startup shipping protocol, SDKs, apps, and community programs.</p>
   </div>
   <div class="grid md:grid-cols-2 gap-6">
     <div class="profile">
@@ -208,9 +235,9 @@ features:
 
 <section id="testnet" class="section shell cta">
   <div>
-    <p class="eyebrow">Call to Action</p>
-    <h2>Join the True Network testnet</h2>
-    <p class="lede">Build attestations, deploy reputation algorithms and launch trust-native dApps. We respond quickly to teams shipping on Raman Network.</p>
+    <p class="eyebrow">Call to action</p>
+    <h2>Join the Raman testnet</h2>
+    <p class="lede">Issue attestations, generate proofs, and build apps atop the True Network identity layer. We respond quickly to teams shipping on Raman.</p>
   </div>
   <div class="cta-actions">
     <a class="button" href="https://at.truenetwork.io/community">Join the community</a>
