@@ -1,6 +1,6 @@
 ---
 title: Reputation Utility Module | Utilising points for rewards, staking & retention
-description: This document explains the working of reputation as a secondary asset after money, it explains the working of reputation utility module of True Network that enables staking of points, recieving rewards, reputation aging and more.
+description: This document explains the working of reputation as a secondary asset after money, it explains the working of reputation utility module of True Network that enables staking of points, receiving rewards, reputation aging and more.
 lang: en-US
 ---
 
